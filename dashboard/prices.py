@@ -3,12 +3,12 @@ import requests
 #from dotenv import load_dotenv
 import pickle
 
-#load_dotenv()
+load_dotenv()
 
-#api_key=os.getenv("NEW_API_KEY")
+api_key=os.getenv("NEW_API_KEY")
 
 def get_aapl_price():
-    url=f"https://api.twelvedata.com/price?symbol=AAPL&apikey=6bf3bdff97a14db19bdea24ba1900629"
+    url=f"https://api.twelvedata.com/price?symbol=AAPL&apikey={api_key}"
     response = requests.get(url)
 
     #print(f"Status Code: {response.status_code}")
@@ -34,7 +34,7 @@ def get_aapl_price():
     return price_aapl['price']
 
 def get_nvda_price():
-    url=f"https://api.twelvedata.com/price?symbol=nvda&apikey=6bf3bdff97a14db19bdea24ba1900629"
+    url=f"https://api.twelvedata.com/price?symbol=nvda&apikey={api_key}"
     response = requests.get(url)
 
     #print(f"Status Code: {response.status_code}")
