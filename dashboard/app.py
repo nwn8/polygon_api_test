@@ -23,21 +23,10 @@ def reactive_calc_combined():
     # call the methods to get the data
     aapl_price=prices.get_aapl_price()
 
-    """
-    with open("aapl_log.pkl","rb") as file2:
-         a=pickle.load(file2)
 
-    a_latest=a[-1]
-    """
 
     nvda_price=prices.get_nvda_price()
 
-    """
-    with open("nvda_log.pkl","rb") as filer:
-        n=pickle.load(filer)
-
-    n_latest=n[-1]
-    """
     # Get a timestamp for "now" and use string format strftime() method to format it
     #timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
